@@ -1,0 +1,27 @@
+.cont-algin{
+    width: 35%;
+    padding: 3%;
+    /* background: white; */
+    background-image: url('./pg1.jpg');
+      background-repeat: no-repeat;
+    border-radius: 20px;
+    
+    margin-top: 10%;
+}
+.cont-algin:hover{
+    box-shadow: 6px 4px 47px 8px   rgb(233, 139, 139);
+}
+.nav-style{
+    background-color: rgb(255, 255, 255); 
+    margin-bottom: 10px; 
+}
+.style1{
+    background: none;
+    border: none ;
+    padding: 0;
+}
+.style2{
+    font-size:25px;
+    margin-top: 5px;
+    color:rgb(99, 118, 85);
+}

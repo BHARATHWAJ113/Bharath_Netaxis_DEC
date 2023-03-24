@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <link rel="icon" type="image/x-icon" href="https://thumbs.dreamstime.com/z/bd-logo-letter-monogram-slash-modern-designs-template-black-color-white-background-164905894.jpg">
+    <title>JS Function </title>
+</head>
+<body>
+
+<div class="text-center">
+    <h1>EVEN(isEven())</h1>
+    <h1>factorial(fact())</h1>
+    <h1>Kababtosnake (Kebabtosnake())</h1>
+    
+</div>
+
+<script>
+    function isEven(i){
+        if(i % 2 === 0 ){
+            console.log("True");
+        }
+        else{
+            console.log("False")
+        }    
+    }
+    //2nd function
+
+    function fact(num){
+         
+    var result = 1;
+    for (var i = 2; i <= num; i++) {
+        result *= i;
+    }
+    return result;
+    }
+    //3rd function
+    function Kebabtosnake(str){
+        var new_srt= str.replace(/-/g , "_");
+        return new_srt;
+    }
+</script>
+</body>
+</html>
+

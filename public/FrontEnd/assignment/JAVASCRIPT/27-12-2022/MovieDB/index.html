@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>JS Object</title>
+</head>
+
+<body>
+
+    <div class="text-center">
+        <h1>Movie DB</h1>
+        
+    </div>
+
+    <script>
+        var movies = [{
+            title:"Theri", 
+            haswatched:true,
+            rating:4.8
+        },{
+            title:"Master", 
+            haswatched:true,
+            rating:5
+        },{
+            title:"Varisu", 
+            haswatched:false,
+            rating:5
+        }]
+
+        movies.forEach(function(movie){
+            var result ="You Have ";
+            if(movie.haswatched){
+                result +="Watched ";
+            }
+            else{
+                result +="Not Seen ";
+            }
+            result += "\'" + movie.title + "\' " ;
+            result += movie.rating + " Stars";
+            console.log(result)
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+body {
+    background-color: #e2b5b5;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.square {
+    width: 25%;
+    background: rgb(228, 155, 228);
+    padding-bottom: 30%;
+    float: left;
+    margin: 4px;
+    border-radius: 20%;
+    transition: background 0.4s;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 100px solid rgb(237, 157, 157);
+    
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+h1 {
+    text-align: center;
+    line-height: 1;
+    font-weight: normal;
+    color: rgb(11, 11, 11);
+    background: #1a4ef9;
+    margin: 0;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#colorDisplay {
+    font-size: 200%;
+}
+
+
+#stripe {
+    background: rgb(15, 15, 15);
+    height: 30px;
+    text-align: center;
+    color: rgb(246, 244, 244);
+}
+
+.selected {
+    color: rgb(215, 222, 228);
+    background: rgb(35, 141, 233);
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: rgb(207, 217, 225);
+    letter-spacing: 2px;
+    font-size: inherit;
+    transition: all 0.7s;
+    outline: none;
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
+}
+
+button:hover {
+    color: rgb(70, 108, 154);
+    background: rgb(236, 239, 242);
+}

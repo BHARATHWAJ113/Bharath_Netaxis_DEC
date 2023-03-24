@@ -1,0 +1,117 @@
+<!-- Location by your coordinates finder only works if you open this app locally on your computer. You can clone this app from my GitHub https://github.com/PaulinaDesign/Weather_app_AngularJS and try full features -->
+
+<!DOCTYPE html>
+<html ng-app="weatherApp" ng-cloak>
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather App | AngularJS</title>
+  <meta name="Weather App" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <script src="app.js"></script>
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial;
+        font-size: 17px;
+    }
+
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .content {
+        position: relative;
+        bottom: 0;
+        background-image: url('bg.jpg') ;
+        background-size: cover;
+        /* opacity: 25%; */
+        /* background: rgba(0, 0, 0, 0.5); */
+        color: #111010;
+    }
+</style>
+</head>
+
+
+<body ng-controller="weatherController" data-ng-init="init()">
+  <video autoplay muted loop id="myVideo">
+    <source src="./Lightning.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+  <!-- TAKES USER INPUT AND FINDS CITY -->
+  <div class="container content">
+    
+    <div class="search">
+      <form ng-submit="findCity()">
+        <input type="text" ng-model="writtenCity" name="text" placeholder="Select a city" />
+        <button id="find" ng-click="findCity()">
+          <span class="material-icons">search</span>
+        </button>
+      </form>
+
+      <!-- DETECTS CITY AUTOMATICALLY -->
+      <button id="locate" ng-click="findAutomatic()">
+        <span class="material-icons">my_location</span>
+      </button>
+    </div>
+
+
+    <!-- SHOWS A CURRENT WEATHER -->
+    <div class="today-weather">
+      <div class="today-main">
+        <div id="city-name">{{cityName}}</div>
+        <div id="date">{{date * 1000 | date: "yyyy-MM-dd"}}</div>
+        <img ng-src={{icon}} id="weather-icon" alt="" />
+        <div id="temperature">
+          <p>{{temperature}} &#176;C</p>
+        </div>
+      </div>
+      <div class="today-info">
+        <div id="decription">{{description}}</div>
+        <div>
+          <p>Sensible temperature <br>{{feelsLike}} &#176;C</p>
+        </div>
+        <div>
+          <p>Wind speed <br>{{wind}} m/s</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- SHOWS A WEATHER FORECAST FOR THE NEXT 5 DAYS -->
+    <marquee><h5 class="text-white ps"><b>Note:</b> If you are using proxy server it will not work.So view the website without proxy</h5></marquee>
+    <!-- <div class="future-container"> -->
+      <!-- DATE -->
+      <!-- <div class="future-info" id="future-date" ng-repeat="date in futureData"> -->
+        <!-- {{ date.dt * 1000 | date: "yyyy-MM-dd" }} -->
+      <!-- </div> -->
+      <!-- ICON -->
+      <!-- <img ng-repeat="icon in futureData" ng-src={{iconHttp}}{{icon.weather[0].icon}}{{png}} class="future-info" -->
+        <!-- id="future-icon" alt="" /> -->
+      <!-- TEMPERATURE -->
+      <!-- <div class="future-info" id="future-temp" ng-repeat="temp in futureData"> -->
+        <!-- <p>{{ temp.temp.day | number:0 }} &#176;C</p> -->
+      <!-- </div> -->
+      <!-- WIND -->
+      <!-- <div class="future-info" id="future-wind" ng-repeat="wind in futureData"> -->
+        <!-- <p>{{ wind.wind_speed }} m/s</p> -->
+      <!-- </div> -->
+    <!-- </div> -->
+
+  </div>
+</body>
+
+</html>

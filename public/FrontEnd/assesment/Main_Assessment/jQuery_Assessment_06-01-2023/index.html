@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assest/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="./assest/CSS/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/1716af8fd8.js" crossorigin="anonymous"></script>
+    <title>jQuery Assessment</title>
+</head>
+
+<body class="bg-light">
+
+
+    <!-- page 1 -->
+
+
+    <div id="hide">
+        <div id="login" class="card login-card bg-light rounded">
+            <label><b> <i class="fa fa-user-circle-o" aria-hidden="true"></i> USERNAME:</b></label>
+            <input id="uname" class="user" type="text" placeholder="User Id" required>
+
+            <br>
+            <button id="submit" type="submit" class="btn btn-success"><i class="fa fa-check-circle"
+                    aria-hidden="true"></i> Login</button>
+<p>Note:UserName:<b>"Bharath,Dharani,Elwin,Hema,<br>Pavan,Giri,Thou,Mokesh,Hari"</b></p>
+        </div>
+    </div>
+
+
+    <!-- page 2 -->
+
+
+    <div id="show" class="select">
+        <div id="printdata" class="row">
+
+        </div>
+        <div class="text-center mt-3">
+            <button class="btn btn-success btn-lg" onclick="buy()">Buy</button>
+        </div>
+    </div>
+
+
+    <!-- page 3 -->
+
+
+    <div id="shopping-cart" class="h-size1 bg-light select">
+        <div class="txt-heading text-center">
+            <h1>Shopping cart</h1>
+        </div>
+        <a onClick="emptyCart()" id="btnEmpty" class="btn btn-success">Empty Cart</a>
+        <a href="#printdata" id="btnBack" onclick="back()" class="btn btn-danger">Back</a>
+        <div class="row" id="cartTableBody">
+
+        </div>
+        <div class="mt-4 text-center">
+            <h2 class="text-right text-center">Total Amount:<span id="totalAmount" class="ans"></span></h2>
+            <button onclick="payCart()" id="btnPay" class="btn btn-success">Confrim Payment</button>
+        </div>
+    </div>
+
+
+    <!-- page 4 -->
+
+
+
+    <div id="trans" class="select">
+        <div class="tra text-center bg-secondary">
+            <h1 class="text-white pt-5">Transaction has beem<br>Completed Successfully</h1>
+
+        </div>
+    </div>
+
+    <script src="./assest/JS/Jquery.min.js"></script>
+    <script src="./assest/JS/app.js"></script>
+</body>
+
+</html>

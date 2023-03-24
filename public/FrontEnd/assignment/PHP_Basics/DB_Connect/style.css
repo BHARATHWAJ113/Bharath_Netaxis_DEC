@@ -1,0 +1,24 @@
+.form1{
+    border: 2px solid #a83838;
+    border-radius: 20px;
+}
+label{
+    font-weight: bold;
+    color: aliceblue;
+}
+.box{
+    padding: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: red;
+    border-radius: 40px;
+    box-shadow : 5px 5px 5px 5px  black;
+}
+.box:hover{
+    padding: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: rgb(2, 95, 167);
+    border-radius: 40px;
+    box-shadow : 5px 5px 5px 5px  rgba(208, 85, 235, 0.858);
+}

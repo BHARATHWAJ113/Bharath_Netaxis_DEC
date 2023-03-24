@@ -1,0 +1,60 @@
+<!-- edit stud data Modal -->
+        <div class="modal fade" id="addmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Student Data</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <?php
+                        extract($_POST);
+
+                        $sql = "SELECT * FROM stud_mark WHERE id = '" . $_GET['id'] . "'";
+                        $result = $db->query($sql);
+
+                        $row = mysqli_fetch_array($result);
+                            
+                        echo "<div class='container'>
+    <form enctype='multipart/form-data' method='post'>
+        <div class='row g-3'>
+            <div class='col-md-12'>
+                <label class='form-label'>Name</label>
+                <input type='text' class='form-control' name='stud_name' value=".$row['stud_name']." Required>
+            </div>
+            <div class='col-md-6'>
+                <label class='form-label'>Tamil</label>
+                <input type='number' class='form-control' name='tamil' value=". $row['tamil'] ." Required>
+            </div>
+            <div class='col-md-6'>
+                <label class='form-label'>English</label>
+                <input type='number' class='form-control' name='english' value=". $row['english'] ." Required>
+            </div>
+            <div class='col-md-6'>
+                <label class='form-label'>Maths</label>
+                <input type='number' class='form-control' name='maths' value=". $row['maths'] ." Required>
+            </div>
+            <div class='col-md-6'>
+                <label class='form-label'>Science</label>
+                <input type='number' class='form-control' name='science' value=". $row['science'] ." Required>
+            </div>
+            <div class='col-md-6'>
+                <label class='form-label'>Social</label>
+                <input type='number' class='form-control' name='social' value=". $row['social'] ." Required>
+            </div>
+            <div class='col-md-6'>
+                <button type='submit' name='save' class='btn btn-primary send m-4'>Save</button>
+            </div>
+        </div>
+    </form>
+</div>";
+                        ?>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+

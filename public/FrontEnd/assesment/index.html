@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1716af8fd8.js" crossorigin="anonymous"></script>
+    <style>
+        hr.new {
+            border: 3px dashed rgb(7, 149, 43);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: 17px;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .content {
+            position: relative;
+            bottom: 0;
+            /* background: rgba(219, 213, 213, 0.336); */
+            color: #f1f1f1;
+            margin-top:20%;
+            width: 100%;
+            padding: 20px;
+        }
+    </style>
+    <title>Assessment</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./assets/bg_ass.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="container content text-center ">
+        <h1 class="text-dark">ASSESSMENT</h1>
+        <a class="btn btn-dark m-2" href="./Sample_Assessment/index.html"><b>Sample Assessment</b></a>
+        <a class="btn btn-dark m-2" href="./Main_Assessment/index.html"><b>Main Assessment</b></a>
+    </div>
+</body>
+
+</html>
