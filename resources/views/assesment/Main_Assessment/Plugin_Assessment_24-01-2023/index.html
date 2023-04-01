@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="assets/CSS/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1716af8fd8.js" crossorigin="anonymous"></script>
+  <link href="assets/CSS/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fulid m-3 h-100" id="container">
+
+    <!-- page 1 -->
+
+    <div id="hide" class="">
+      <h1 class="text-white texxt text-center">Online Purchase</h1>
+      <div id="login" class="card login-card bg-light rounded">
+        <label><b> <i class="fa fa-user-circle-o" aria-hidden="true"></i> USERNAME:</b></label>
+        <input id="uname" class="user" type="text" placeholder="User Id" required>
+
+        <br>
+        <button id="submit" type="submit" class="btn btn-success"><i class="fa fa-check-circle" aria-hidden="true"></i>
+          Login</button>
+        <p>Note:UserName:<b>"Bharath,Dharani,Alan,Mesha"</b></p>
+      </div>
+    </div>
+
+    <!-- page 2 -->
+
+
+    <div id="show" class="select user addcart">
+      <h1 id="un" class="text-white text-center un"></h1>
+
+      <div class="button-right mt-3">
+        <a class="btn btn-success btn-lg userListBtn" onclick="userListbtn()">UserList</a>
+      </div>
+
+      <div id="search-container" class="m-5">
+        <input type="search" id="search-input" placeholder="Search by Product Name .." />
+      </div>
+
+
+      <!-- Product list -->
+
+
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 border border-danger bg-white">
+          <h2 class="text-center">Product List</h2>
+          <div id="productList" class="row">
+
+
+
+          </div>
+        </div>
+
+
+        <!-- Cart list -->
+
+
+        <div class="col-sm-12 col-lg-5 border border-danger bg-white">
+          <h2 class="text-center">Cart List</h2>
+          <!-- <a onClick="emptyCart()" id="btnEmpty" class="btn btn-success button-left">Empty Cart</a> -->
+          <div id="cartList" class="row">
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- /*======================Page 3=====================*/ -->
+
+    <div id="userListhide" class="select">
+      <h1 id="ul" class="text-white text-center ul">User List</h1>
+
+      <div class="button-right mt-3">
+        <a class="btn btn-success btn-lg userListBtn" href="./index.html">home</a>
+      </div>
+
+      <div class="row">
+        <div id="userCart" class="col-lg-5 border border-danger bg-white">
+          <h2 class="text-center">user List</h2>
+          <div id="userList" class="text-center">
+
+            <a class="btn btn-danger userListBtn3" onclick="bharath()">Logined User</a><br>
+          </div>
+        </div>
+        <div id="totalCart" class="col-lg-5  border border-danger bg-white">
+          <h2 class="text-center">User Product List</h2>
+          <div class="row">
+            <div class="col-lg-12">
+              <div id="userProductList" class="row">
+
+
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <h3>Total: <span id="totalAmount"></span></h3>
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  <script src="assets/JS/jquery.js"></script>
+  <script src="assets/JS/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/JS/pluginFile.js"></script>
+  <script type="text/javascript" src="assets/JS/script.js"></script>
+
+</body>
+
+</html>

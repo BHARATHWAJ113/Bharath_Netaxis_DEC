@@ -1,0 +1,168 @@
+<div class="col-lg-7">
+                        <?php
+                        extract($_POST);
+                        
+                        $sql = "SELECT * FROM user_data";
+                        $result = $db->query($sql);
+
+                        echo "<table class='table table-warning table-striped' border='1'>
+                              <tr class='text-center'>
+                              <th colspan='10'class='text-dark'>User Details</th>
+                              </tr>
+                              <tr>
+                              <th>ID</th>
+                              <th>Name</th>
+                              <th>EMAIL ID</th>
+                              <th>IMAGE</th>
+                              <th>ADDRESS</th>
+                              <th>CITY</th>
+                              <th>STATE</th>
+                              <th>PINCODE</th>
+                              </tr>";
+                        while ($row = mysqli_fetch_array($result)) {
+                           echo "<tr>";
+                           echo "<td>" . $row['id'] . "</td>";
+                           echo "<td>" . $row['u_name'] . "</td>";
+                           echo "<td>" . $row['u_email'] . "</td>";
+                           echo "<td><img class='imgs' src='./img/" . $row['u_image'] . "'></td>";
+                           echo "<td>" . $row['u_address'] . "</td>";
+                           echo "<td>" . $row['u_city'] . "</td>";
+                           echo "<td>" . $row['u_state'] . "</td>";
+                           echo "<td>" . $row['u_pincode'] . "</td>";
+                           echo "</tr>";
+                        }
+                        echo "</table>";
+
+
+
+                        ?>
+
+                        </div> 
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+if (isset($_REQUEST['send'])) {
+
+   // echo "checking";
+   // inserting the image or file to folder
+
+   $error = "";
+   $message = "";
+   $message1 = "";
+
+
+
+   $upload_error = array(
+      0 => 'File is uploaded successfully',
+      1 => 'Uploaded file cross the limit',
+      2 => 'Uploaded file cross the limit which is mentioned in the HTML form.',
+      3 => 'File is partially uploaded or there is any error in between uploading.',
+      4 => 'No file was uploaded.',
+      6 => 'Missing a temporary folder.',
+      7 => 'Failed to write file to disk.',
+      8 => 'A PHP extension stopped the uploading process.'
+   );
+
+
+   $tmp_name = $_FILES['u_image']['tmp_name'];
+   $name = $_FILES['u_image']['name'];
+   $folder = "img";
+
+   if (move_uploaded_file($tmp_name, $folder . "/" . $name)) {
+      $message1 = "<div class='alert alert-success'><b>File Uploaded Successfully<b></div>";
+   } else {
+      $error = $_FILES['u_image']['error'];
+      $message = "<div class='alert alert-danger m-2'><b>" . $upload_error[$error] . "<b></div>";
+   }
+
+   //  Inserting the data to table
+
+   // echo "checking";
+   extract($_POST);
+
+   $sql = "SELECT * FROM user_data WHERE u_name='$u_name' AND u_email='$u_email'";
+   $checkrows = $db->query($sql);
+
+   if ($checkrows->num_rows > 0) {
+      echo "<p class='alert alert-danger'>The Data is already exists</p>";
+   } else {
+      // echo "$u_image";
+      $query = "INSERT IGNORE INTO user_data(u_name, u_email, u_image, u_address, u_city, u_state, u_pincode) VALUES('$u_name', '$u_email','$name','$u_address','$u_city','$u_state','$u_pincode')";
+      echo "<p class='alert alert-success'>The data is inserted sucessfully</p>";
+      // $page = $_SERVER['PHP_SELF'];
+      // header("Refresh: 0; url=$page");
+      $result = $db->query($query);
+   }
+   $db->close();
+};
+
+
+ <div class="col-lg-7 p-5">
+                        <?php
+                        include('session.php');
+                        extract($_POST);
+                        
+                        $sql = 'SELECT * FROM user_data';
+                        $result = $db->query($sql);
+
+                        echo "<table class='table table-warning table-striped' border='1'>
+                              <tr class='text-center'>
+                              <th colspan='10'class='text-dark'>User Details</th>
+                              </tr>
+                              <tr>
+                              <th>ID</th>
+                              <th>Name</th>
+                              <th>EMAIL ID</th>
+                              <th>IMAGE</th>
+                              <th>ADDRESS</th>
+                              <th>CITY</th>
+                              <th>STATE</th>
+                              <th>PINCODE</th>
+                              </tr>";
+                        while ($row = mysqli_fetch_array($result)) {
+                           echo "<tr>";
+                           echo "<td>" . $row['id'] . "</td>";
+                           echo "<td>" . $row['u_name'] . "</td>";
+                           echo "<td>" . $row['u_email'] . "</td>";
+                           echo "<td><img class='imgs' src='./" . $row['u_image'] . "'></td>";
+                           echo "<td>" . $row['u_address'] . "</td>";
+                           echo "<td>" . $row['u_city'] . "</td>";
+                           echo "<td>" . $row['u_state'] . "</td>";
+                           echo "<td>" . $row['u_pincode'] . "</td>";
+                           echo "</tr>";
+                        }
+                        echo "</table>";
+
+
+
+                        ?>
+
+                        </div> 
+
+
+
+
+
+
+
+
+
+<div class='card mb-3' style='max-width: 540px;'>
+  <div class='row g-0'>
+    <div class='col-md-4'>
+      <img src='...' class='img-fluid rounded-start' alt='...'>
+    </div>
+    <div class='col-md-8'>
+      <div class='card-body'>
+        <h5 class='card-title'>Card title</h5>
+        <p class='card-text'>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class='card-text'><small class='text-muted'>Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

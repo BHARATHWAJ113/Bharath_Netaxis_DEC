@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>JS Array </title>
+</head>
+
+<body>
+
+    <div class="text-center">
+        <h1>To-Do-List Pt-2</h1>
+        <ul>
+            <li>"new" to add ToDoList</li>
+            <li>"list" to list ToDoList</li>
+            <li>"delete" to remove ToDoList </li>
+            <li>"quit" to Quit app</li>
+        </ul>
+
+    </div>
+
+    <script>
+        var todolist = ["Get up 6AM And go to aunt house"];
+        var A = prompt("What would you to do? (Enter 'quit' and see the result in console)")
+
+        while (A !== "quit") {
+            if (A === "list") {
+                todolist.forEach(function (todo, i) {
+                    console.log(i + ": " + todo);
+                });
+            } else if (A === "new") {
+                var newlist = prompt("Add New To-Do-List");
+                todolist.push(newlist);
+            } else if (A === "delete") {
+                var index = prompt("Enter the indext to remove from To-Do-List");
+                todolist.splice(index, 1);
+                console.log("Deleted the ToDoList");
+            }
+            var A = prompt("What would you to do?");
+        }
+        console.log("OK. Quite The App!!");
+
+    </script>
+</body>
+
+</html>

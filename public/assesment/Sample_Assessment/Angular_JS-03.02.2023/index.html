@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Tele-pay</title>
+    <script src="./assets/js/angular.min.js"></script>
+    <script src="https://kit.fontawesome.com/1716af8fd8.js"></script>
+  </head>
+
+  <body ng-controller="myCtrl" style="background-color: #121111">
+    <nav class="navbar navbar-light nav-style">
+      <span class="navbar-brand mb-0 h1" style="color: #1959da; padding: 0"
+        ><i class="fa-brands fa-linux ps-4" style="font-size: 40px"></i>
+        <span
+          class="navbar-brand mb-0 h1"
+          style="line-height: 20px; font-style: italic; font-family: Ink Free; font-weight: 900"
+        >
+          <span style="color: #eb1c1c; font-size: 40px">Tele</span
+          ><span style="color: rgb(46, 154, 16); font-size: 40px">Pay</span></span
+      ></span>
+      <span
+        ><button
+          ng-hide="log"
+          style="
+            box-shadow: none;
+            color: #ebeef1;
+            background-color: #d22323;
+          "
+          class="btn btn-outline-success"
+          ng-click="myLogin()"
+        >
+          login
+        </button>
+        <button
+          ng-hide="sign"
+          style="
+            box-shadow: none;
+            color: #110955;
+            background-color: #11c214dc;"
+          class="btn btn-outline-danger"
+          ng-click="mySignup()"
+        >
+          signup
+        </button></span
+      >
+    </nav>
+    <div class="container-fluid">
+      <div class="container cont-algin" ng-show="login">
+        <div>
+          <div class="row login">
+            <div class="col-sm-12 text-center">
+              <h1 class="text-danger" ><i class="fa-solid fa-user-plus"></i> Login</h1>
+              <hr />
+            </div>
+            <div class="col-sm-12">
+              <form>
+                <div class="form-group">
+                  <label for="Input1" class="text-success">Name</label>
+                  <input
+                    type="text"
+                    ng-model="name"
+                    class="form-control"
+                    id="Input1"
+                    placeholder="Enter 'bharath'"
+                    style= "border: 2px solid rgb(237, 28, 28);"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Password" class="text-success">UPI PIN</label>
+                  <input
+                    type="password"
+                    style= "border: 2px solid green;"
+                    ng-model="password"
+                    class="form-control"
+                    id="Password"
+                    placeholder="UPI '113'"
+                  />
+                </div>
+                <div class="text-center"><button class="btn btn-success border border-danger border-5 m-3" ng-click="mylogin1()" ><b>LOGIN</b></button></div>
+                <div style="text-align: center" class="text-success">
+                  Don't have an account?
+                  <span   style="color: rgb(5, 74, 170)" ng-click="mySignup()"
+                    >Sign up</span
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+<div class="container cont-algin" ng-show="signup">
+    <div>
+      <div class="row signup">
+        <div class="col-sm-1 log1">
+          <button class="btn1 style1" ng-click="myLogin()">
+            <span></span><i class="fa-solid fa-backward style2"> </i>
+          </button>
+        </div>
+        <div class="col-sm-11">
+          <h3 style="display: contents" class="text-danger"> Create Account</h3>
+          <hr />
+        </div>
+        <div class="col-sm-12">
+          <form>
+            <div class="form-group">
+              <label for="name" class="text-success">Name</label>
+              <input
+                type="text"
+                ng-model="newname"
+                class="form-control"
+                id="name"
+                placeholder="Enter Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="accNumber" class="text-success">A/c No</label>
+              <input
+                type="text"
+                ng-model="newaccnumber"
+                class="form-control"
+                id="accNumber"
+                placeholder="Enter A/c No"
+              />
+            </div>
+            <div class="form-group">
+              <label for="Password1" class="text-success">UPI PIN</label>
+              <input
+                type="password"
+                ng-model="newpassword1"
+                class="form-control"
+                id="Password1"
+                placeholder="UPI PIN"
+              />
+            </div>
+            <button
+              type="submit"
+              ng-click="mysignup1()"
+              class="btn btn-danger border border-success border-5 m-3"
+              style="width: 30%; margin: 20px;"
+            >
+              signup
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="container"
+    style="
+      text-align: center;
+      font-weight: 900;
+      font-size: x-large;
+      padding-bottom: 2%;
+      /* background-color: white; */
+      background-image: url('./assets/img/pg2.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 4%;
+      border-radius: 25px;
+    "
+    ng-show="menu"
+  >
+    <div
+      class="row"
+      style="padding-top: 3%; border-bottom: 1px solid #00000042"
+    >
+      <div class="col-sm-8">
+        <h1 class="text-success userdata">WELCOME<span class="text-danger"> {{ name || newname }}</span></h1>
+      </div>
+      <div class="col-sm-4" style="text-align: end">
+        <button
+          style="box-shadow: none"
+          class="btn btn-info"
+          ng-click="myLogin()"
+        >
+          logout
+        </button>
+      </div>
+    </div>
+    <div class="row" style="padding-top: 3%">
+      <div
+        class="col-sm-3"
+        ng-show="user"
+        ng-click="myClick1(newname,newaccnumber)"
+      >
+        <span
+          class="imgspan"
+          style="border: 1px solid black; padding: 10%; border-radius: 50%"
+          ><img style="width: 25%" src="./assets/img/userm.png" alt=""
+        /></span>
+      </div>
+      <div class="col-sm-3" ng-repeat="x in arr" ng-click="myClick(x)">
+        <span
+          class="imgspan"
+          style=" border-radius: 50%"
+          ><img style="width: 25%" src="{{ x.img }}"/></span>
+      </div>
+    </div>
+    <div class="row" style="padding-top: 3%; padding-bottom: 10%">
+      <div class="col-sm-3" ng-show="user">New User</div>
+      <div class="col-sm-3">Vishnu</div>
+      <div class="col-sm-3">Claman</div>
+      <div class="col-sm-3">Vetri</div>
+    </div>
+    <div
+      class="container"
+      style="
+        padding-top: 10%;
+        color: rgb(255, 255, 255);
+        padding-bottom: 8%; width: 50%;
+        margin: 0 auto;
+        border: 2px solid rgb(150, 4, 4);
+        background: rgb(26, 141, 43);
+      "
+    >
+      <div
+        class="row"
+        style="
+          border-radius: 40px;
+          padding-bottom: 2%; 
+        "
+      >
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-6" style="text-align: right">Name :</div>
+            <div class="col-sm-6" style="text-align: left">
+              {{bhaname}}
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-6" style="text-align: right">
+              Account no :
+            </div>
+            <div class="col-sm-6" style="text-align: left">
+              {{bhaaccno}}
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-6" style="text-align: right">Amount :</div>
+            <div class="col-sm-6" style="text-align: left">
+              <input
+                class="form-control"
+                ng-change="emtyAmt()"
+                style="width: 30%;"
+                ng-model="amount"
+                type="number"
+                maxlength="200000"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12" ng-show="btn">
+          <button class="btn btn-success" ng-click="transfer()">
+            transfer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" ng-show="transaction">
+    <div
+      style="
+        text-align: center;
+        padding: 25%;
+        border-radius: 10px;
+        color: aliceblue;
+        background-image: url();
+        /* background-color: rgb(10, 10, 10); */
+
+        border: 1px solid rgba(255, 245, 245, 0.966);
+        margin-top: 10%;
+      "
+    >
+
+      <label class="text-center">
+        <h2 class="text-white p-3">"Sended to {{bhaname}}"</h2>
+        <img src="./assets/img/images.jpg" >
+
+      </label>
+
+    </div>
+  </div>
+
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

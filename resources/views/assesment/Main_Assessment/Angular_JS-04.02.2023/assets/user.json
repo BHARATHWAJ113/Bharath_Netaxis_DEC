@@ -1,0 +1,68 @@
+{
+    "user": [
+        {
+            "username": "bharath",
+            "Password": "bharath113",
+            "email_id": "bharath@gmail.com"
+        },
+        {
+            "username": "dharani",
+            "Password": "dharani105",
+            "email_id": "dharani@gmail.com"
+        },
+        {
+            "username": "alan",
+            "Password": "alan128",
+            "email_id": "alan@gmail.com"
+        },
+        {
+            "username": "a",
+            "Password": "a",
+            "email_id": "a@gmail.com"
+        }
+    ],
+
+    "movies": [
+        {
+            "movie_name": "Varisu",
+            "Available_tickets": 9,
+            "Per_ticket": 200,
+            "time": "12:45pm"
+        },
+        {
+            "movie_name": "Thunivu",
+            "Available_tickets": 6,
+            "Per_ticket": 150,
+            "time": "1:15pm"
+        },
+        {
+            "movie_name": "Leo",
+            "Available_tickets": 10,
+            "Per_ticket": 500,
+            "time": "3:00pm"
+        }
+    ],
+
+    "bevarage": [
+        {
+            "items": "Puff",
+            "rate": 50,
+            "quantity": 0
+        },
+        {
+            "items": "Coke",
+            "rate": 80,
+            "quantity": 0
+        },
+        {
+            "items": "Popcorn",
+            "rate": 150,
+            "quantity": 0
+        },
+        {
+            "items": "French Fries",
+            "rate": 90,
+            "quantity": 0
+        }
+    ]
+}

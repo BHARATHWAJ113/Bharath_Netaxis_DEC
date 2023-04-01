@@ -1,0 +1,19 @@
+.login-card {
+    max-width: 500px;
+    margin-left: 700px;
+    margin-top: 150px;
+    padding: 10px;
+}
+
+.select {
+    display: none;
+}
+
+.img {
+    height: 350px;
+    width: 280px;
+}
+
+.tra {
+    height: 100vh;
+}

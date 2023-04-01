@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/angular.min.js"></script>
+    <script src="https://kit.fontawesome.com/1716af8fd8.js"></script>
+    <script src="./assets/js/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>TicketNew</title>
+
+  </head>
+
+  <body>
+    <div class="container-fluid" ng-controller="myCtrl">
+      <nav
+        class="navbar navbar-light"
+        style="background-color: rgb(0, 0, 0); margin-bottom: 10px"
+      >
+        <span class="navbar-brand h1" style="color: azure; padding-left: 10px"
+          ><i
+            class="fa fa-ticket"
+            style="font-size: 48px; color: rgb(255, 145, 0)"
+          ></i
+        ></span>
+        <span
+          class="navbar-brand h1"
+          style="color: rgb(255, 145, 0); font-size: 36px"
+        >
+          Ticket New</span
+        >
+      </nav>
+      <!----------- page 1 login and signup button------------>
+      <div class="container style1">
+        <div class="row" ng-show="button">
+          <div class="col-sm-6 log1">
+            <button class="btn btn-dark btn1" ng-click="myLogin()">
+              LOGIN
+            </button>
+          </div>
+          <div class="col-sm-6 log2">
+            <button
+              class="btn btn-warning border border-danger btn1"
+              ng-click="mySignup()"
+            >
+              SIGN UP
+            </button>
+          </div>
+        </div>
+      <!----------- page 1 login page------------>        
+        <div ng-show="login">
+          <div class="row login mt-5">
+            <div class="col-sm-12">
+              <h1>login</h1>
+              <hr />
+            </div>
+            <div class="col-sm-12">
+              <form>
+                <div class="form-group">
+                  <label for="Input1">User_Name</label>
+                  <input
+                    type="text"
+                    ng-model="username"
+                    class="form-control"
+                    id="Input1"
+                    placeholder="Enter User_Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input
+                    type="password"
+                    ng-model="password"
+                    class="form-control"
+                    id="Password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div><button ng-click="mylogin1()" class="btn btn-warning border border-danger border-2 m-3">click</button></div>
+                <div style="text-align: center">
+                  Don't have an account?
+                  <span style="color: rgb(255, 0, 0)" ng-click="mySignup()"
+                    >Sign up</span
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      <!----------- page 1 signup page------------>          
+        <div ng-show="signup">
+          <div class="row signup mt-5">
+            <div class="col-sm-12">
+              <h1>Enter Your Details</h1>
+              <hr />
+            </div>
+            <div class="col-sm-12">
+              <form>
+                <div class="form-group">
+                  <label for="email">Email ID</label>
+                  <input
+                    type="email"
+                    ng-model="newemail"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter Email ID"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="user">User Name</label>
+                  <input
+                    type="text"
+                    ng-model="newusername"
+                    class="form-control"
+                    id="user"
+                    placeholder="Enter User_Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="Password">Password</label>
+                  <input
+                    type="password"
+                    ng-model="newpassword"
+                    class="form-control"
+                    id="Password2"
+                    placeholder="Password"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  ng-click="mysignup1()"
+                  class="btn btn-warning border border-danger m-4"
+                >
+                  sign up
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+            <!----------- page 2 show and bevarage------------>  
+      <div ng-show="details">
+        <div class="container">
+          <div class="row" ng-hide="btns">
+            <div class="col-sm-12" style="text-align: center">
+              <h1>Welcome {{username||newusername}}</h1>
+            </div>
+            <div class="col-sm-6" style="text-align: end">
+              <button ng-click="myshow()" class="btn btn-dark btn1">
+                Show
+              </button>
+            </div>
+            <div class="col-sm-6">
+              <button ng-click="myBevarage()" class="btn btn-warning border border-danger btn1">
+                Bevarage
+              </button>
+            </div>
+          </div>
+          <div class="row" style="text-align: center" ng-show="shows">
+            <div class="col-sm-4">
+              <h1>Movies</h1>
+            </div>
+            <div class="col-sm-4">
+              <h1>Time</h1>
+            </div>
+            <div class="col-sm-4">
+              <h1>Tickets_Available</h1>
+            </div>
+            <div class="row" ng-repeat="x in tickets">
+              <div class="col-sm-4 h3 border border-danger text-success" ng-click="myMovies(x)" ng-model="moviename">
+                {{x.movie_name}}
+              </div>
+              <div class="col-sm-4 h3 border border-danger">{{x.time}}</div>
+              <div class="col-sm-4 h3 border border-danger">{{x.Available_tickets}}</div>
+            </div>
+
+            <div
+              class="row"
+              ng-show="totals"
+              style="margin-top: 7%; text-align: center"
+            >
+              <div class="col-sm-12">
+                <h1>Select count of tickets for " {{name}} "</h1>
+              </div>
+              <div class="col-sm-3">
+                <h3>{{price}}</h3>
+              </div>
+              <div class="col-sm-2">
+                <h3>X</h3>
+              </div>
+              <div
+                class="col-sm-3"
+                style="padding-top: 1%; text-align: -webkit-center"
+              >
+                <input
+                  id = "valid"
+                  style="width: 50%"
+                  type="number"
+                  class="form-control"
+                  min="0"
+                  ng-change="movieAmt()"
+                  ng-init="quantity=0"
+                  ng-model="quantity"
+                />
+                <p class="text-danger h3"><b id="demo"></b></p>
+              </div>
+              <div class="col-sm-4">
+                <h3 ng-bind="price*quantity" ng-model="total"></h3>
+              </div>
+              <div class="col-sm-12">
+                <h1 class="border border-success border-2">Ticket Amount : <span  id="tickettotal"> {{price*quantity}}</span></h1>
+              </div>
+              <div class="col-sm-12">
+                <h1 class="border border-success border-2">Bevarage Amount :  <span id="btotal"></span></h1>
+              </div>
+              <div class="col-sm-12">
+                <h1 class="border border-success border-2">Total Amount :  <span id="ftotal"></span> </h1>
+              </div>
+              <div id="hide" class="col-sm-12 pt-4">
+                <button
+                  class="btn btn-success border border-warning border-2 btn-lg"
+                  onclick="bTot()">
+                  Confrim
+                </button>
+              </div>
+              <div id="show" class="col-sm-12 pt-4 hide">
+                <button
+                  class="btn btn-success border border-warning border-2 btn-lg"
+                  ng-click="pay()"
+                  ng-show="amountbtn"
+                >
+                  pay
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="text-align: center" ng-show="bevaragess">
+            <div class="col-sm-3">
+              <h1>Items</h1>
+            </div>
+            <div class="col-sm-3">
+              <h1>Rate</h1>
+            </div>
+            <div class="col-sm-3">
+              <h1>Quantity</h1>
+            </div>
+            <div class="col-sm-3">
+              <h1>Total</h1>
+            </div>
+            <div class="row" ng-repeat="y in bevarages">
+              <div class="col-sm-3 border border-danger text-danger">
+                <h3 class=" pt-2">{{y.items}}</h3>
+              </div>
+              <div class="col-sm-3 border border-danger">
+                <h3 class=" pt-2">{{y.rate}}</h3>
+              </div>
+              <div
+                class="col-sm-3 border border-danger p-2"
+                style=" text-align: -webkit-center"
+              >
+                <input
+                  ng-init="quantity2=0"
+                  type="number"
+                  min="0"
+                  ng-change="myChan()"
+                  class="form-control"
+                  ng-model="quantity2"
+                />
+              </div>
+              <div class="col-sm-3 border border-danger"  ng-model="total2">
+                <h3 id="hi">{{y.rate*quantity2}}</h3>
+            </div>
+        </div>
+        <div class="col-sm-12">
+                <h3>Total Bevarage :<span id="btota"></span> </h3>
+                <a class="btn btn-primary"  onclick="bTotl()">select</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+            <!----------- page 3 transcition page------------>  
+      <div class="container" ng-show="transaction">
+        <div
+          style="
+            text-align: center;
+            padding: 20%;
+            color: rgb(255, 10, 10);
+            background-color:#000000 ;
+            border: 1px solid #ff7214d2;
+            border-radius: 50%;
+            margin-top: 5%;
+          "
+        >
+          <label>
+            <h3>Transaction Has Been Completed Successfully for " {{name}} "</h3>
+          </label>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

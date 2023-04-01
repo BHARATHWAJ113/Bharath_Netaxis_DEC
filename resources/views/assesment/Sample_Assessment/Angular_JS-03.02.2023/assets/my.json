@@ -1,0 +1,28 @@
+{
+  "login_Data": [
+    {
+      "name": "bharath",
+      "Account_Number": 19113,
+      "Password": "113",
+      "friendLists": [{ "fname": "vishnu", "fAccount":19128, "amt" : 5000 },{ "fname": "dharani", "fAccount":20105, "amt" : 10000 },{ "fname": "vetri", "fAccount":20149, "amt" : 3500 }],
+      "img": "./assets/img/userm.png",
+      "amount":200000
+    },
+    {
+      "name": "dharani",
+      "Account_Number": 20105,
+      "Password": "105",
+      "friendLists": [{ "fname": "claman", "fAccount":19113, "amt" : 20000 },{ "fname": "alan", "fAccount":19128, "amt" : 5000 },{ "fname": "vetri", "fAccount":20149, "amt" : 3500 }],
+      "img": "./assets/img/userf.png",
+      "amount":100000
+    },
+    {
+      "name": "alan",
+      "Account_Number": 19128,
+      "Password": "128",
+      "friendLists": [{ "fname": "vetri", "fAccount":20105, "amt" : 10000 },{ "fname": "bharath", "fAccount":19113, "amt" : 20000 },{ "fname": "sai", "fAccount":20149, "amt" : 3500 }],
+      "img": "./assets/img/userm.png",
+      "amount":50000
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+.h-size{
+    height: 100vh;
+}
+.h-size1{
+    height: 70vh;
+}
+img{
+    height: 250px;
+    width: 250px;
+}
+.select{
+    display: none;
+}

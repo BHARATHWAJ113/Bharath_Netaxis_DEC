@@ -1,0 +1,17 @@
+tr{
+    display: flex;
+    margin: 0;
+    padding: 5px;
+}
+.td{
+    display: flex;
+    width: 250px;
+ 
+}
+
+#button{
+    float: right;
+}
+.hide{
+    display: none;
+}

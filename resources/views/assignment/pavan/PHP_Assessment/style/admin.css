@@ -1,0 +1,12 @@
+#cards{
+    margin: 0 auto; 
+    margin-top: 2%; 
+    margin-left: 9%;
+}
+
+@media only screen and (max-width: 600px) {
+    #cards{
+        margin: 0 auto; 
+        margin-top: 5%; 
+    }
+}

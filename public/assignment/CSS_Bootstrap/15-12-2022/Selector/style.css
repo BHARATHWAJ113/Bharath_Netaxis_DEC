@@ -1,0 +1,21 @@
+body {
+    background-color: #a0e386;
+}
+h1{
+    font-family: "Lucida Console";
+    font-size: 70px;
+    text-align: center;
+    margin-top: 350px;
+}
+.Note{
+    margin-top: 250px;
+    margin-right: 20px;
+}
+#footer{
+    font-family: "Roboto";
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #39a30f;
+    height: 100vh;
+}

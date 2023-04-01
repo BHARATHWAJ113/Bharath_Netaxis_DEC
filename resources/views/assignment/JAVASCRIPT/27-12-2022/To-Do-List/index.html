@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <link rel="icon" type="image/x-icon"
+        href="https://thumbs.dreamstime.com/z/bd-logo-letter-monogram-slash-modern-designs-template-black-color-white-background-164905894.jpg">
+    <title>JS Function </title>
+</head>
+
+<body>
+
+    <div class="text-center">
+        <h1>To-Do-List Pt-1</h1>
+        <ul>
+            <li>"new" to add ToDoList</li>
+            <li>"list" to list ToDoList</li>
+            <li>"quit" to Quit app</li>
+        </ul>
+
+    </div>
+
+    <script>
+        var todolist = ["Get up 6AM And go to aunt house"];
+        var A = prompt("What would you to do?")
+
+        while (A !== "quit") {
+            if (A === "list") {
+                console.log(todolist);
+            }
+            else if (A === "new") {
+                var newlist = prompt("Add New To-Do-List");
+                todolist.push(newlist);
+            }
+            var A = prompt("What would you to do?")
+        }
+        console.log("OK. Quite The App!!")
+
+    </script>
+</body>
+
+</html>

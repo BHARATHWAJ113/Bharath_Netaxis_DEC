@@ -1,0 +1,124 @@
+{
+	"students": [
+		{
+			"img_url":"assets/img/userm.png",
+			"name": "BHARATH WAJ",
+			"id": "001",
+			"m1": 85,
+			"m2": 75,
+			"m3": 65,
+			"m4": 85,
+			"m5": 75
+		},
+		{
+			"img_url":"assets/img/userf.png",
+			"name": "DHARANI",
+			"id": "002",
+			"m1": 85,
+			"m2": 75,
+			"m3": 65,
+			"m4": 85,
+			"m5": 75
+		},
+		{
+			"img_url":"assets/img/userm.png",
+			"name": "ALAN",
+			"id": "003",
+			"m1": 75,
+			"m2": 65,
+			"m3": 55,
+			"m4": 75,
+			"m5": 55
+		},
+		{
+			"img_url":"assets/img/userf.png",
+			"name": "MESHA",
+			"id": "004",
+			"m1": 75,
+			"m2": 65,
+			"m3": 55,
+			"m4": 55,
+			"m5": 77
+		},
+		{
+			"img_url":"assets/img/userm.png",
+			"name": "THOUFIQ",
+			"id": "005",
+			"m1": 75,
+			"m2": 65,
+			"m3": 55,
+			"m4": 56,
+			"m5": 55
+		},
+		{
+			"img_url":"assets/img/userm.png",
+			"name": "ELWIN",
+			"id": "006",
+			"m1": 75,
+			"m2": 65,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		},
+		{
+			"img_url":"assets/img/userm.png",
+			"name": "GUNA",
+			"id": "007",
+			"m1": 75,
+			"m2": 65,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		},
+		{
+			"img_url":"assets/img/userm.png",
+			"name": "PAVAN",
+			"id": "008",
+			"m1": 75,
+			"m2": 65,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		},
+		{
+			"img_url":"assets/img/userf.png",
+			"name": "HARI PRIYA",
+			"id": "009",
+			"m1": 75,
+			"m2": 65,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		},
+		{
+			"img_url":"assets/img/userf.png",
+			"name": "HEMA",
+			"id": "010",
+			"m1": 75,
+			"m2": 65,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		},
+		{
+			"img_url":"assets/img/userm.png",
+			"name": "MOKESH",
+			"id": "012",
+			"m1": 75,
+			"m2": 65,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		},
+		{
+			"img_url":"assets/img/userm.png",
+			"name": "GIRI",
+			"id": "012",
+			"m1": 75,
+			"m2": 65,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		}
+	]
+}

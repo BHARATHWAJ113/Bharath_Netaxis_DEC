@@ -1,0 +1,38 @@
+.about-me{
+    background-color: rgb(250, 193, 128);
+    
+}
+.img{
+    height: 350px;
+    width: 300px;
+}
+.style{
+    font-size: 20px;
+    font-family:sans-serif;
+}
+.style1{
+    color: rgb(48, 49, 49);
+    border: 0px;
+}
+.style2{
+    color: rgb(46, 155, 250);
+    border: 0px;
+}
+.para{
+    font-size: 18px;
+}
+.bold{
+    font-weight: bolder;
+}
+.experience{
+    /* background-color: rgb(243, 238, 233); */
+    background-image: url("./img/ocenter.png");
+ 
+}
+.fstyle{
+    font-size: large;
+}
+.contact{
+    background-color: rgb(127, 204, 134);
+    
+}

@@ -1,0 +1,1 @@
+require('./sampleProduct/controllers/HomeController')

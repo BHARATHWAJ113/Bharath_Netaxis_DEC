@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>JS Array</title>
+</head>
+
+<body>
+
+    <div class="text-center">
+        <h1>Array Promblem set</h1>
+        <ul>
+            <li>printReverse()</li>
+            <li>isUniform()</li>
+            <li>sumArray()</li>
+            <li>max()</li>
+        </ul>
+
+    </div>
+
+    <script>
+        function printReverse(array) {
+            for (var i = array.length - 1; i >= 0; i--) {
+                console.log(array[i]);
+            }
+        }
+
+
+        function isUniform(array) {
+            var first = array[0];
+            for (var i = 1; i < array.length; i++) {
+                if (array[i] !== first) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function sumArray(array){
+            var total = 0;
+            array.forEach(function(element){
+                total += element;
+            });
+            return total;
+        }
+
+        function max(array){
+            var max = array[0];
+            for(var i = 1; i< array.length; i++){
+                if (array[i] > max){
+                    max = array[i];
+                }
+            }
+            return max; 
+        }
+
+    </script>
+</body>
+
+</html>

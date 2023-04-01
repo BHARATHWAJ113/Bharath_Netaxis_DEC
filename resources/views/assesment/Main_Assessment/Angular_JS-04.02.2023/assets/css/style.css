@@ -1,0 +1,28 @@
+body {
+    background-image: linear-gradient(to left, rgba(255, 174, 0, 0.685), rgba(243, 164, 36, 0.616));
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.style1 {
+    margin-top: 10%;
+    padding: 1%;
+    width: 30%;
+}
+
+.log1 {
+    text-align: end;
+}
+
+.log2 {
+    text-align: inherit;
+}
+
+.btn1 {
+    padding: 2% 15% 2% 15%;
+}
+.hide{
+    display: none;
+}
